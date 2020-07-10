@@ -1,0 +1,21 @@
+ion-content {
+    font-family: 'Varela Round', sans-serif;
+    // background-color: #ede7df !important;    
+}
+.center {
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    height: auto;
+    
+    // --background: #ede7df;
+    outline: none;
+}
+.margin-top {
+    margin-top: 20px;
+}
+
+.tim{
+    transition-duration: 0.2s;
+    animation: ease-in 0.2s;
+}

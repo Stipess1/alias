@@ -1,0 +1,26 @@
+ion-content {
+    font-family: 'Varela Round', sans-serif;
+    
+}
+.center {
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    height: 100%;
+    // background-color: #ede7df !important;
+    // --background: #ede7df;
+    outline: none;
+}
+ion-list-header > ion-label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+// .item-content{
+//     background-color: #ede7df !important;
+    
+// }
+
+// ion-item {
+//     --ion-background-color: #ede7df;
+// }

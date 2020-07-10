@@ -1,0 +1,45 @@
+{
+    "HOME": {
+        "title": "Alias Word Game",
+        "newGame": "New Game",
+        "settings": "Settings",
+        "about": "About",
+        "game": "Game",
+        "version": "Version",
+        "sendMail": "Send Email",
+        "mailNote": "Support and suggestions"
+    },
+    "GAME": {
+        "pause": "Pause",
+        "guessing": "Guessing",
+        "explaining": "Explaining",
+        "skipped": "Skipped",
+        "correct": "Correct",
+        "correctA": "Correct",
+        "skip": "Skip",
+        "result": "Results",
+        "points": "Points",
+        "CorrectAnswer": "Correct The Answer",
+        "guessed": "Guessed",
+        "explained": "Explained",
+        "save": "Save",
+        "continue": "Continue",
+        "cancel": "Cancel",
+        "finish": "Finish",
+        "nextTeam": "Next Team",
+        "play": "Play",
+        "newTeam": "New Team",
+        "player1": "Player 1",
+        "player2": "Player 2",
+        "gamePause": "Game Paused",
+        "language": "Language",
+        "croatian": "Croatian",
+        "english": "English",
+        "selectOne": "Select One",
+        "enterPName": "Enter a player name.",
+        "chooseLang": "Choose a language!",
+        "team": "Team",
+        "canPlay": "2 teams needed to start the game"
+
+    }
+}

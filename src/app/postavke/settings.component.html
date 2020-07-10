@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'HOME.settings' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="center"> 
+    <ion-list>
+      <ion-list-header>
+        <ion-label>{{'HOME.game' | translate}}</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-range min="20" max="130" pin="true" value="{{this.service.points}}" (ionChange)="change($event)">
+          <ion-label slot="start"><ion-icon name="star" style="zoom:2.0;"></ion-icon></ion-label>
+          <ion-label slot="end">130</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-range min="20" max="80" pin="true" value="{{this.service.time}}" (ionChange)="changeTime($event)">
+          <ion-label slot="start"><ion-icon src="../../../../assets/icon/ios-hourglass.svg" style="zoom:2.0;"></ion-icon></ion-label>
+          <ion-label slot="end">80</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>{{'HOME.about' | translate}}</ion-label>
+      </ion-list-header>
+      <ion-item button (click)="mail()">
+        <ion-label>{{'HOME.sendMail' | translate}}</ion-label>
+        <ion-note slot="end">{{'HOME.mailNote' | translate}}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          {{'HOME.version' | translate}}
+        </ion-label>
+        <ion-note slot="end">v1.1</ion-note>
+      </ion-item>
+    </ion-list>
+    
+  </div>
+</ion-content>

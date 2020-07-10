@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      {{'GAME.result' | translate}}
+    </ion-list-header>
+    <ion-item *ngFor="let tim of this.service.timoviFix; let i = index">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span class="igrac-ime">{{i+1}}. {{tim.igrac1}} </span>& <span class="igrac-ime">{{tim.igrac2}} </span>
+          </ion-col>
+          <ion-col>
+            {{'GAME.points' | translate}}: <span class="igrac-ime">{{tim.bodovi}}/{{this.service.points}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+       
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="content">
+
+        </div>
+        <ion-text *ngIf="this.service.zavrsiGame == false">{{'GAME.nextTeam' | translate}}: <span class="text">{{service.trenutniTim.igrac1}} & {{service.trenutniTim.igrac2}}</span></ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" size="large" expand="full" (click)="odustani()">{{'GAME.cancel' | translate}}</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button *ngIf="this.service.zavrsiGame == false" color="success" size="large" expand="full" (click)="nastavi()">{{'GAME.continue' | translate}}</ion-button>
+        <ion-button *ngIf="this.service.zavrsiGame == true" color="success" size="large" expand="full" (click)="zavrsi()">{{'GAME.finish' | translate}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-footer>

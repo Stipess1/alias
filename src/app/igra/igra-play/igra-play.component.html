@@ -1,0 +1,51 @@
+
+<ion-content>
+    <ion-grid>
+      <ion-row class="ion-margin-start">
+        <ion-col>
+        {{'GAME.explaining' | translate}}: <span class="igrac-ime" src="../../../assets/audio/success.mp3">{{this.service.trenutniTim.igrac1}}</span>
+        </ion-col>
+        <ion-col>
+        {{'GAME.guessing' | translate}}: <span class="igrac-ime">{{this.service.trenutniTim.igrac2}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-chip color="success">
+              <ion-label>{{'GAME.correct' | translate}}</ion-label>
+            </ion-chip>
+            <ion-badge slot="end" color="success">{{this.service.trenutniTim.tocnih}}</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-chip color="danger">
+              <ion-label>{{'GAME.skipped' | translate}}</ion-label>
+            </ion-chip>
+            <ion-badge slot="end" color="danger">{{this.service.trenutniTim.netocnih}}</ion-badge>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="content">
+      <p class="pogodi-rijec ion-text-center">{{this.service.trenutnaRijec}}</p>
+      <p class="vrijeme ion-text-center">{{time}}</p>
+      <ion-button color="danger" fill="outline" (click)="zaustaviInfo()">{{'GAME.pause' | translate}}</ion-button>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <ion-button color="danger" size="large" expand="full" (click)="netocno()">{{'GAME.skip' | translate}}</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" size="large" expand="full" (click)="tocno()">{{'GAME.correctA' | translate}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-footer>

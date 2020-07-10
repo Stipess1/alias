@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>{{'HOME.newGame' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="center">
+    <div class="timovi">
+      <!--  -->
+      <div class="tim ion-margin-top" *ngFor="let item of service.timovi" id="{{item.id}}" >
+        <ion-item>
+          <ion-label>
+            {{'GAME.team' | translate}} {{item.id}}
+          </ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input required="true" maxlength="15" [placeholder]='"GAME.player1" | translate' (ionChange)="changed(1, item, $event)"></ion-input>
+              </ion-col>
+              <ion-col>
+                <ion-input required="true" maxlength="15" [placeholder]='"GAME.player2" | translate' (ionChange)="changed(2, item, $event)"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-icon name="close-circle" (click)="removeTeam(item)"></ion-icon>
+        </ion-item>
+      </div>
+    </div>
+    <ion-button class="margin-top" color="primary" expand="block" (click)="newTeam()">{{'GAME.newTeam' | translate}}</ion-button>
+    <ion-button disabled="{{cantPlay}}" class="margin-top" color="success" expand="block" (click)="start()">{{'GAME.play' | translate}}</ion-button>
+
+    
+  </div>
+  <div class="ion-margin">
+    <h3>{{'HOME.settings' | translate}}</h3>
+    <ion-item>
+      <ion-label>{{'GAME.language' | translate}}</ion-label>
+      <ion-select [placeholder]='"GAME.selectOne" | translate' (ionChange)="languageChange($event)">
+        <ion-select-option value="english">{{'GAME.english' | translate}} ({{this.service.engRijeci.length}})</ion-select-option>
+        <ion-select-option value="croatian">{{'GAME.croatian' | translate}} ({{this.service.hrRijeci.length}})</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  
+</ion-content>
+
